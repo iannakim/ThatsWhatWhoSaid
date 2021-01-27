@@ -73,9 +73,10 @@ button:hover {
   filter: brightness(120%);
 }
 
-/* when you press the button, it will move down vertically */
+/* when you press the button, both button and shadow it will move down vertically */
 button:active {
-  transform: translate(0, 03rem);
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
 
