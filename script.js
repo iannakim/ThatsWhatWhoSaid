@@ -1,3 +1,9 @@
+const quoteContainer = document.getElementById('quote-container');
+const quoteText = document.getElementById('quote');
+const authorText = document.getElementById('author');
+const twitterBtn = document.getElementById('twitter');
+const newQuoteBtn = document.getElementById('new-quote');
+
 // Get quote API through async fetching
 
 async function getQuote() {
@@ -6,9 +12,12 @@ async function getQuote() {
     try {
         const response = await fetch(proxyUrl + apiUrl);
         const data = await response.json();
-        console.log(data);
+        // console.log(data);
+        authorText.innerText = data.quoteAuthor;
+        quoteText.innerText = data.quoteText;
     } catch (error) {
-      console.log('whoops, no quote', error);
+      getQuote();
+      // console.log('whoops, no quote', error);
     }
 }
 
