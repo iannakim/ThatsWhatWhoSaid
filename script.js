@@ -8,7 +8,7 @@ const newQuoteBtn = document.getElementById('new-quote');
 
 async function getQuote() {
     const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-    const apiUrl = 'http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json';
+    const apiUrl = 'https://www.officeapi.dev/api/quotes/random';
     try {
         const response = await fetch(proxyUrl + apiUrl,
           {headers: {
@@ -17,20 +17,23 @@ async function getQuote() {
         );
         const data = await response.json();
 
-      // If Author is blank, add 'Unknow'
-      if (data.quoteAuthor === '') {
-        authorText.innerText = 'Unknown';
-      } else {
-        authorText.innerText = data.quoteAuthor;
-      }
+      // // If Author is blank, add 'Unknow'
+      // if (data.quoteAuthor === '') {
+      //   authorText.innerText = 'Unknown';
+      // } else {
+      //   authorText.innerText = data.quoteAuthor;
+      // }
 
-      // Reduce font size for long quotes
-      if (data.quoteText.length > 120) {
-        quoteText.classList.add('long-quote');
-      } else {
-        quoteText.classList.remove('long-quote')
-      }
-        quoteText.innerText = data.quoteText;
+      // // Reduce font size for long quotes
+      // if (data.quoteText.length > 120) {
+      //   quoteText.classList.add('long-quote');
+      // } else {
+      //   quoteText.classList.remove('long-quote')
+      // }
+      //   quoteText.innerText = data.quoteText;
+
+      authorText.innerText = `${data.data.character.firstname} ${data.data.character.lastname}`
+      quoteText.innerText = data.data.content
     } catch (error) {
       getQuote();
       // console.log('whoops, no quote', error);

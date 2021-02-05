@@ -9,6 +9,7 @@ body {
   min-height: 100vh;
   background-color: #fff6af;
   background-image: url("images/theoffice.jpg");
+  background-size: cover;
   color: black;
   font-family: 'Slabo 13px', sans-serif;
   font-weight: 700;
@@ -81,6 +82,10 @@ button:active {
 
 .twitter-button:hover {
   color: #38a1f3;
+}
+
+.new-quote:hover {
+  color: #bbf338;
 }
 
 .fa-twitter- {
