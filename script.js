@@ -24,16 +24,15 @@ async function getQuote() {
       //   authorText.innerText = data.quoteAuthor;
       // }
 
-      // // Reduce font size for long quotes
-      // if (data.quoteText.length > 120) {
-      //   quoteText.classList.add('long-quote');
-      // } else {
-      //   quoteText.classList.remove('long-quote')
-      // }
-      //   quoteText.innerText = data.quoteText;
-
-      authorText.innerText = `${data.data.character.firstname} ${data.data.character.lastname}`
+      // Reduce font size for long quotes
+      if (data.data.content.length > 120) {
+        quoteText.classList.add('long-quote');
+      } else {
+        quoteText.classList.remove('long-quote')
+      }
       quoteText.innerText = data.data.content
+      authorText.innerText = `- ${data.data.character.firstname} ${data.data.character.lastname}`
+
     } catch (error) {
       getQuote();
       // console.log('whoops, no quote', error);

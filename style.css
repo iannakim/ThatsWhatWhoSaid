@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&family=Patrick+Hand&family=Slabo+13px&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&family=Slabo+13px&display=swap');
 
 html {
   box-sizing: border-box;
@@ -11,7 +11,7 @@ body {
   background-image: url("images/theoffice.jpg");
   background-size: cover;
   color: black;
-  font-family: 'Slabo 13px', sans-serif;
+  font-family: 'Sriracha', sans-serif;
   font-weight: 700;
   text-align: center;
   display: flex;
@@ -25,7 +25,7 @@ body {
   padding: 20px 30px;
   /* top and bottom then left and right */
   border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -35,19 +35,19 @@ body {
 }
 
 .long-quote {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .fa-quote-left {
-  font-size: 4rem;
+  font-size: 3rem;
   /* 4rem == 64px */
 }
 
 .quote-author {
   margin-top: 15px;
-  font-size: 2rem;
+  font-size: 2.0rem;
   font-weight: 400;
-  font-style: italic;
+  font-family: 'Slabo 13px', sans-serif;
 }
 
 .button-container {
