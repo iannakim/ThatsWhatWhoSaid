@@ -7,14 +7,13 @@ const newQuoteBtn = document.getElementById('new-quote');
 // Get quote API through async fetching
 
 async function getQuote() {
-    const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    // const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    // {headers: {
+    //   'X-Requested-With': 'blah'
+    // }}
     const apiUrl = 'https://www.officeapi.dev/api/quotes/random';
     try {
-        const response = await fetch(proxyUrl + apiUrl,
-          {headers: {
-            'X-Requested-With': 'blah'
-          }}
-        );
+        const response = await fetch(apiUrl);
         const data = await response.json();
 
       // // If Author is blank, add 'Unknow'
