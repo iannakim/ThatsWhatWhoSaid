@@ -1,5 +1,5 @@
 # ThatsWhatWhoSaid
-Check out the <a href="https://annakim.dev/ThatsWhatWhoSaid">Live demo here</a> 🎬
+Check out the <a href="https://annakim.dev/ThatsWhatWhoSaid" target="_blank">Live demo here</a> 🎬
 
 Are you an Office Fan? Need a motivating (or demotivating) quote to get through a long day?
 Try out this add that generates random quotes from the popular TV show, The Office. 
